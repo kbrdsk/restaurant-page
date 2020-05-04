@@ -1,10 +1,11 @@
-import './style.css';
+import './styles/style.css';
+import imageSrc from './images/test-image.jpeg';
 
 let body = document.querySelector('body');
-let testDiv = () => {
-	let div = document.createElement('div');
-	div.innerText = 'Still working?';
-	return div;
+let testImg = () => {
+	let img = new Image();
+	img.src = imageSrc;
+	return img;
 }
 
-body.appendChild(testDiv());
+body.appendChild(testImg());
