@@ -1,11 +1,18 @@
 import './styles/style.css';
-import imageSrc from './images/test-image.jpeg';
+import {Tab} from './tab.js';
 
 let body = document.querySelector('body');
-let testImg = () => {
-	let img = new Image();
-	img.src = imageSrc;
-	return img;
+
+let navContainer = document.createElement('div');
+navContainer.classList.add('nav-container');
+
+let contentContainer = document.createElement('div');
+contentContainer.classList.add('content-container');
+
+for(let i = 0; i < 3; i++){
+	navContainer.appendChild((new Tab()).nav);
 }
 
-body.appendChild(testImg());
+
+body.appendChild(navContainer);
+body.appendChild(contentContainer);
