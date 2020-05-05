@@ -13,7 +13,6 @@ export class Tab {
 		this._nav.classList.add('tab-nav');
 		this._nav.appendChild(this._navIcon);
 		this._nav.appendChild(this._navTitle);
-		this._nav.tab = this;
 
 		this._content = document.createElement('div');
 		this._content.classList.add('tab-content');

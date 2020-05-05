@@ -2,9 +2,14 @@ import './styles/style.css';
 import './styles/navbar.css';
 import './styles/content.css';
 
+import homeIcon from './images/home.svg';
+import restaurantIcon from './images/restaurant.svg';
+import chefIcon from './images/chef.svg';
+
+
 import {Tab} from './tab.js';
 
-let body = document.querySelector('body');
+let main = document.querySelector('main');
 
 let navContainer = document.createElement('div');
 navContainer.classList.add('nav-container');
@@ -21,15 +26,23 @@ function activateTab(tab){
 }
 
 let tabs = [];
+let tabSettings = [{icon: homeIcon, title: 'Home'},
+				   {icon: restaurantIcon, title: 'Restaurants'},
+				   {icon: chefIcon, title: 'Cooking'},
+				   ];
+
 for(let i = 0; i < 3; i++){
 	let tab = new Tab();
 	tabs.push(tab);
 
-	tab.nav.addEventListener('click', e => activateTab(e.target.tab));
+	if(i === 0) activateTab(tab);
+	tab.navIcon = tabSettings[i].icon;
+	tab.title = tabSettings[i].title;
+	tab.nav.addEventListener('click', () => activateTab(tab));
 
 	navContainer.appendChild(tab.nav);
 	contentContainer.appendChild(tab.content);
 }
 
-body.appendChild(navContainer);
-body.appendChild(contentContainer);
+main.appendChild(navContainer);
+main.appendChild(contentContainer);

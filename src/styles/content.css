@@ -1,5 +1,5 @@
 .content-container{
-	background-color: #00f;
+	background-color: #5f010a;
 	padding: 20px;
 	height: calc(100% - 40px);
 	width: calc(100% - 40px);
@@ -9,6 +9,10 @@
 
 .tab-content{
 	display: flex;
-	background-color: #000;
+	background-color: #debdab;
 	width: 100%;
+}
+
+.tab-content[active=false]{
+	display: none;
 }
