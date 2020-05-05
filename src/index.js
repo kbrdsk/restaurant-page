@@ -10,6 +10,12 @@ import chefIcon from './images/chef.svg';
 import {Tab} from './tab.js';
 
 let main = document.querySelector('main');
+let header = document.querySelector('header');
+
+let pageTitle = document.createElement('p');
+pageTitle.classList.add('page-title');
+pageTitle.textContent = '';
+header.appendChild(pageTitle);
 
 let navContainer = document.createElement('div');
 navContainer.classList.add('nav-container');
@@ -17,14 +23,8 @@ navContainer.classList.add('nav-container');
 let contentContainer = document.createElement('div');
 contentContainer.classList.add('content-container');
 
+
 let activeTab;
-
-function activateTab(tab){
-	if(activeTab) activeTab.active = false;
-	tab.active = true;
-	activeTab = tab;
-}
-
 let tabs = [];
 let tabSettings = [{icon: homeIcon, title: 'Home'},
 				   {icon: restaurantIcon, title: 'Restaurants'},
@@ -46,3 +46,11 @@ for(let i = 0; i < 3; i++){
 
 main.appendChild(navContainer);
 main.appendChild(contentContainer);
+
+
+
+function activateTab(tab){
+	if(activeTab) activeTab.active = false;
+	tab.active = true;
+	activeTab = tab;
+}

@@ -1,13 +1,17 @@
 .nav-container{
-	background-color: #31465a;
+	/*background-color: #31465a;*/
 }
 
 .tab-nav{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background-color: #2d180f;
+	border: 5px solid;
+	border-radius: 20px;
+	border-color: #b10207;
+	background-color: #f5ebe5;
 	cursor: pointer;
+	margin: 10px 0px;
 }
 
 .tab-nav:first-child{
@@ -26,18 +30,18 @@
 	height: 45px;
 	width: 45px;
 	margin-top: 15px;
-	filter: invert(45%) sepia(76%) saturate(375%) 
-	hue-rotate(338deg) brightness(90%) contrast(83%);
+	filter: invert(8%) sepia(9%) saturate(4612%) 
+	hue-rotate(337deg) brightness(92%) contrast(93%);
 }
 
 .nav-title{
 	margin: 5px 0px;
-	color: #b26d46;
+	color: #2d180f;
 	font-weight: bold;
 }
 
 .tab-nav[active=true]{
-	background-color: #5f010a;
+	background-color: #2d180f;
 	opacity: 1;
 }
 

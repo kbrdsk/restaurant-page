@@ -1,5 +1,6 @@
 .content-container{
-	background-color: #5f010a;
+	background-color: #b10207;
+	border-radius: 50px;
 	padding: 20px;
 	height: calc(100% - 40px);
 	width: calc(100% - 40px);
@@ -9,7 +10,8 @@
 
 .tab-content{
 	display: flex;
-	background-color: #debdab;
+	border-radius: 40px;
+	background-color: #f5ebe5;
 	width: 100%;
 }
 
