@@ -1,19 +1,6 @@
-.nav-container{
-	background-color: #f00;
-}
-
-.content-container{
-	background-color: #00f;
-}
-
 body{
 	display: grid;
 	grid-template-columns: 150px minmax(600px, 1fr);
-	height: 100vh;
-	width: 100vw;
-}
-
-.tab-nav{
-	background-color: #fff;
-	padding-top: 50%;
+	height: calc(100vh - 15px);
+	width: (100vw - 10px);
 }

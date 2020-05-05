@@ -1,0 +1,29 @@
+.nav-container{
+	background-color: #f00;
+}
+
+.tab-nav{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #fff;
+}
+
+.tab-nav[active=true]{
+	background-color: #00f;
+}
+
+.tab-content[active=false]{
+	display: none;
+}
+
+.nav-icon{
+	background-color: #0f0;
+	height: 65px;
+	width: 65px;
+	margin: 10px;
+}
+
+.nav-title{
+	margin: 5px;
+}
