@@ -12,18 +12,19 @@
 	background-color: #f5ebe5;
 	cursor: pointer;
 	margin: 10px 0px;
+	opacity: 0.8;
 }
 
-.tab-nav:first-child{
+/*.tab-nav:first-child{
 	padding-top: 5px;
 }
 
 .tab-nav:last-child{
 	padding-bottom: 5px;
-}
+}*/
 
 .tab-nav[active=false]:hover{
-	/*background-color: #b26d46;*/
+	background-color: #f5ebe544;
 }
 
 .nav-icon{
@@ -35,7 +36,7 @@
 }
 
 .nav-title{
-	margin: 5px 0px;
+	margin: 5px 0px 10px 0px;
 	color: #2d180f;
 	font-weight: bold;
 }

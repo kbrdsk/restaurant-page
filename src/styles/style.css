@@ -1,12 +1,15 @@
 body{
-	display: grid;
-	grid-template-rows: 100px 1fr;
+	display: flex;
+	
+	justify-content: center;
+	align-items: center;
 	height: calc(100vh - 40px);
 	width: calc(100vw - 40px);
 	min-width: 700px;
 	min-height: 700px;
 	background-color: #fff;
 	padding: 20px;
+	font-family: Helvetica;
 }
 
 body::after{
@@ -23,15 +26,15 @@ body::after{
 	z-index: -1;
 }
 
-header{
+/*header{
 	width: 100%;
 	height: 100px;
-	/*background-color: #31465a;*/
+	background-color: #31465a;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	/*background-image: url('../images/banner.jpg');*/
-}
+	background-image: url('../images/banner.jpg');
+}*/
 
 .page-title{
 	font-size: 65px;
@@ -43,6 +46,7 @@ header{
 
 main{
 	display: grid;
-	grid-template-columns: 110px 1fr;
+	height: 700px;
+	grid-template-columns: 110px 700px;
 	grid-gap: 20px;
 }

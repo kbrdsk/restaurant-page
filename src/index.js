@@ -6,6 +6,10 @@ import homeIcon from './images/home.svg';
 import restaurantIcon from './images/restaurant.svg';
 import chefIcon from './images/chef.svg';
 
+import homeContent from './home.js';
+import restaurantContent from './restaurants.js';
+import cookingContent from './cooking.js';
+
 
 import {Tab} from './tab.js';
 
@@ -26,22 +30,30 @@ contentContainer.classList.add('content-container');
 
 let activeTab;
 let tabs = [];
-let tabSettings = [{icon: homeIcon, title: 'Home'},
-				   {icon: restaurantIcon, title: 'Restaurants'},
-				   {icon: chefIcon, title: 'Cooking'},
+let tabSettings = [{icon: homeIcon, 
+					title: 'Home', 
+					content: homeContent},
+				   {icon: restaurantIcon, 
+				   	title: 'Takeout', 
+				   	content: restaurantContent},
+				   {icon: chefIcon, 
+				   	title: 'Cooking', 
+				   	content: cookingContent},
 				   ];
 
 for(let i = 0; i < 3; i++){
 	let tab = new Tab();
 	tabs.push(tab);
 
-	if(i === 0) activateTab(tab);
 	tab.navIcon = tabSettings[i].icon;
 	tab.title = tabSettings[i].title;
+	tab.content = tabSettings[i].content;
 	tab.nav.addEventListener('click', () => activateTab(tab));
 
 	navContainer.appendChild(tab.nav);
 	contentContainer.appendChild(tab.content);
+	
+	if(i === 0) activateTab(tab);
 }
 
 main.appendChild(navContainer);

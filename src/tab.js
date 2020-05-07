@@ -50,6 +50,7 @@ export class Tab {
 	set content(div){
 		this._content = div;
 		this._content.classList.add('tab-content');
+		this.active = false;
 	}
 
 	get nav(){

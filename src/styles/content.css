@@ -6,15 +6,47 @@
 	width: calc(100% - 40px);
 	display: flex;
 	justify-content: stretch;
+	opacity: 0.8;
 }
 
 .tab-content{
 	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 50px;
 	border-radius: 40px;
 	background-color: #f5ebe5;
 	width: 100%;
+	color: #2d180f;
 }
 
 .tab-content[active=false]{
 	display: none;
+}
+
+.tab-content > *{
+	margin: 15px;
+}
+
+h2 {
+	font-size: 50px;
+}
+
+.tab-content > p{
+	font-size: 20px;
+}
+
+.restaurant-name{
+	font-size: 23px;
+	font-weight: bold;
+}
+
+.restaurant-url{
+	font-size: 15px;
+	margin: 7px 0px;
+}
+
+.takeout{
+	align-items: flex-start;
 }
