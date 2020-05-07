@@ -37,7 +37,7 @@ h2 {
 	font-size: 20px;
 }
 
-.restaurant-name{
+.restaurant-name, h3{
 	font-size: 23px;
 	font-weight: bold;
 }
@@ -49,4 +49,8 @@ h2 {
 
 .takeout{
 	align-items: flex-start;
+}
+
+li{
+	margin: 7px 0px;
 }
